@@ -37,9 +37,9 @@ async function muatDaftarAnggota() {
     }
 }
 
-function muatDaftarBuku() {
-    // Memanggil fungsi generik dengan daftar field buku (termasuk kategori)
-    muatDataGenerik("../data/buku.json", ["judul", "pengarang", "tahun", "stok", "kategori"]);
+function muatDaftarAnggota() {
+    // Memanggil fungsi generik dengan daftar field anggota
+    muatDataGenerik("../data/anggota.json", ["no_anggota", "nama", "alamat", "no_hp"]);
 }
 
-document.addEventListener("DOMContentLoaded", muatDaftarBuku);
+document.addEventListener("DOMContentLoaded", muatDaftarAnggota);
