@@ -38,4 +38,9 @@ async function muatDaftarBuku() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", muatDaftarBuku);
+function muatDaftarAnggota() {
+    // Memanggil fungsi generik dengan daftar field anggota
+    muatDataGenerik("../data/anggota.json", ["no_anggota", "nama", "alamat", "no_hp"]);
+}
+
+document.addEventListener("DOMContentLoaded", muatDaftarAnggota);
