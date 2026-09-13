@@ -241,7 +241,7 @@ footer {
         display: block;
     }
 
-    header nav {
+    /* header nav {
         display: none;
         width: 100%;
         order: 3;
@@ -250,6 +250,19 @@ footer {
 
     header nav.nav-open {
         display: block;
+    } */
+
+    header nav {
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+        max-height: 0;           
+        overflow: hidden;        
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    header nav.nav-open {
+        max-height: 300px;      
     }
 
     header nav ul {
