@@ -13,7 +13,7 @@ body {
 }
 
 a {
-    color: #126b34;
+    color: #1d5b8a;
     text-decoration: none;
 }
 
@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #074d2a;
+    background-color: #1d5b8a;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -64,7 +64,7 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #126b34;
+    color: #1d5b8a;
 }
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
@@ -90,7 +90,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #126b34;
+    color: #1d5b8a;
 }
 
 /* ===== Tabel ===== */
@@ -106,7 +106,7 @@ th, td {
 }
 
 thead {
-    background-color: #074d2a;
+    background-color: #1d5b8a;
     color: #fff;
 }
 
@@ -129,11 +129,6 @@ td button {
 
 td button:first-of-type {
     background-color: #f0ad4e;
-    color: #fff;
-}
-
-td button:nth-of-type(2) {
-    background-color: #5bc0de;
     color: #fff;
 }
 
@@ -165,7 +160,7 @@ form select {
 }
 
 form button[type="submit"] {
-    background-color: #074d2a;
+    background-color: #1d5b8a;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -191,7 +186,7 @@ footer {
     overflow-x: auto;
 }
 
-/* ===== Hamburger Menu (JS-Driven) ===== */
+/* ===== Hamburger Menu (JS-driven) ===== */
 .nav-toggle-label {
     display: none;
     font-size: 1.6rem;
@@ -241,7 +236,7 @@ footer {
         display: block;
     }
 
-    /* header nav {
+    header nav {
         display: none;
         width: 100%;
         order: 3;
@@ -250,19 +245,6 @@ footer {
 
     header nav.nav-open {
         display: block;
-    } */
-
-    header nav {
-        width: 100%;
-        order: 3;
-        margin-top: 1rem;
-        max-height: 0;           
-        overflow: hidden;        
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    header nav.nav-open {
-        max-height: 300px;      
     }
 
     header nav ul {
