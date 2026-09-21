@@ -20,3 +20,9 @@ CREATE TABLE IF NOT EXISTS anggota (
     alamat VARCHAR(255),
     no_hp VARCHAR(30)
 );
+
+-- TIMESTAMP : tipe data tanggal + jam (tanpa zona waktu)
+-- NOW()     : fungsi yang mengembalikan tanggal dan jam saat ini
+-- DEFAULT   : nilai otomatis bila INSERT tidak menyebutkan kolom ini
+ALTER TABLE buku
+    ADD COLUMN IF NOT EXISTS tanggal_ditambahkan TIMESTAMP DEFAULT NOW();
