@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/includes/koneksi.php';
 
-$file = __DIR__ . '/../jobsheet6/../data/buku.json';
+$file = __DIR__ . '/data/buku.json';
 if (!is_file($file)) {
     die("File tidak ditemukan: $file\n");
 }
