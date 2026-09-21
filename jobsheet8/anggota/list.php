@@ -5,7 +5,7 @@ require __DIR__ . '/../includes/koneksi.php';
 
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
-$daftarAnggota = $_SESSION['anggota'] ?? [];
+$daftarAnggota = $pdo->query("SELECT * FROM anggota ORDER BY id ASC")->fetchAll(PDO::FETCH_ASSOC);
 ?>
         <section>
             <h2>Daftar Anggota</h2>
