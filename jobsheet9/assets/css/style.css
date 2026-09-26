@@ -127,7 +127,8 @@ td button {
     font-size: 0.85rem;
 }
 
-td button:first-of-type {
+td button:first-of-type,
+td a.btn-edit {
     background-color: #f0ad4e;
     color: #fff;
 }
@@ -135,6 +136,53 @@ td button:first-of-type {
 td button:last-of-type {
     background-color: #d9534f;
     color: #fff;
+}
+
+td a.btn-edit {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+td form.form-hapus {
+    display: inline;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pagination a {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+    color: #1d5b8a;
+}
+
+.pagination a.active {
+    background-color: #1d5b8a;
+    color: #fff;
+    border-color: #1d5b8a;
+}
+
+.search-box form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.search-box button {
+    padding: 0.55rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #1d5b8a;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* ===== Form ===== */
