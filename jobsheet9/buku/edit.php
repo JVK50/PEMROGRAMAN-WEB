@@ -28,7 +28,7 @@ if (!$buku) {
                 <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['pesan']; ?></p>
             <?php endif; ?>
 
-            <form id="form-tambah" method="post" action="proses_edit.php">
+            <form id="form-tambah" class="form-edit" method="post" action="proses_edit.php">
                 <input type="hidden" name="id" value="<?php echo $buku['id']; ?>">
                 <p>
                     <label for="judul">Judul</label><br>

@@ -28,6 +28,25 @@ function initHapusConfirm() {
     });
 }
 
+// ===== Konfirmasi update =====
+function initUpdateConfirm() {
+    document.addEventListener("submit", function (e) {
+        const form = e.target;
+        if (!form.classList.contains("form-edit")) return;
+        if (e.defaultPrevented) return;
+
+        const targetInput = form.querySelector("[name='judul'], [name='nama']");
+        const identitas = targetInput && targetInput.value.trim() !== ""
+            ? '"' + targetInput.value.trim() + '"'
+            : "data ini";
+
+        const yakin = confirm("Simpan perubahan data " + identitas + "?");
+        if (!yakin) {
+            e.preventDefault();
+        }
+    });
+}
+
 // ===== Filter/pencarian tabel real-time =====
 function initTableFilter() {
     const input = document.getElementById("search-input");
@@ -114,6 +133,7 @@ function initValidasiForm() {
 document.addEventListener("DOMContentLoaded", function () {
     initNavToggle();
     initHapusConfirm();
+    initUpdateConfirm();
     initTableFilter();
     initValidasiForm();
 });
