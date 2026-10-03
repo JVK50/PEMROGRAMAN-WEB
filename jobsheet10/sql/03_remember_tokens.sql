@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS remember_tokens (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    selector VARCHAR(32) NOT NULL UNIQUE,
+    token_hash CHAR(64) NOT NULL,
+    expires_at TIMESTAMP NOT NULL
+);
