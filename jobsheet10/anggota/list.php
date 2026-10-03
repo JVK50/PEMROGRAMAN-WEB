@@ -1,4 +1,6 @@
 <?php
+require __DIR__ . '/../includes/auth.php';
+$isAdmin = ($_SESSION['role'] ?? '') === 'admin';
 $page_title = "Daftar Anggota";
 include __DIR__ . '/../includes/header.php';
 require __DIR__ . '/../includes/koneksi.php';
@@ -70,11 +72,15 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                             <td><?php echo $anggota['alamat']; ?></td>
                             <td><?php echo $anggota['no_hp']; ?></td>
                             <td>
-                                <a href="edit.php?id=<?php echo $anggota['id']; ?>" class="btn-edit">Edit</a>
-                                <form class="form-hapus" method="post" action="hapus.php">
-                                    <input type="hidden" name="id" value="<?php echo $anggota['id']; ?>">
-                                    <button type="submit" class="btn-hapus">Hapus</button>
-                                </form>
+                                <?php if ($isAdmin): ?>
+                                    <a href="edit.php?id=<?php echo $anggota['id']; ?>" class="btn-edit">Edit</a>
+                                    <form class="form-hapus" method="post" action="hapus.php">
+                                        <input type="hidden" name="id" value="<?php echo $anggota['id']; ?>">
+                                        <button type="submit" class="btn-hapus">Hapus</button>
+                                    </form>
+                                <?php else: ?>
+                                    -
+                                <?php endif; ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 require __DIR__ . '/../includes/auth.php';
+wajibRole('admin');
 require __DIR__ . '/../includes/koneksi.php';
 
 $id = $_POST['id'] ?? null;
