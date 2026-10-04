@@ -42,7 +42,7 @@ if (!$buku) {
                 </p>
                 <p>
                     <label for="tahun">Tahun Terbit</label><br>
-                    <input type="number" id="tahun" name="tahun" min="1900" max="2026" value="<?php echo $buku['tahun']; ?>" required>
+                    <input type="number" id="tahun" name="tahun" min="1900" max="2026" value="<?php echo e($buku['tahun']); ?>" required>
                 </p>
                 <p>
                     <label for="isbn">ISBN</label><br>
@@ -50,7 +50,7 @@ if (!$buku) {
                 </p>
                 <p>
                     <label for="stok">Stok</label><br>
-                    <input type="number" id="stok" name="stok" min="0" value="<?php echo $buku['stok']; ?>" required>
+                    <input type="number" id="stok" name="stok" min="0" value="<?php echo e($buku['stok']); ?>" required>
                 </p>
                 <p>
                     <label for="kategori">Kategori</label><br>

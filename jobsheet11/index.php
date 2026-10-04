@@ -15,11 +15,11 @@ $totalAnggota = $pdo->query("SELECT COUNT(*) FROM anggota")->fetchColumn();
             <h2>Ringkasan</h2>
             <article>
                 <h3>Total Buku</h3>
-                <p><?php echo $totalBuku; ?></p>
+                <p><?php echo e($totalBuku); ?></p>
             </article>
             <article>
                 <h3>Total Anggota</h3>
-                <p><?php echo $totalAnggota; ?></p>
+                <p><?php echo e($totalAnggota); ?></p>
             </article>
             <article>
                 <h3>Sedang Dipinjam</h3>

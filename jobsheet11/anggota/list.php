@@ -34,7 +34,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
             <h2>Daftar Anggota</h2>
 
             <?php if ($flash): ?>
-                <p class="flash flash-<?php echo $flash['type']; ?>"><?php echo $flash['pesan']; ?></p>
+                <p class="flash flash-<?php echo e($flash['type']); ?>"><?php echo e($flash['pesan']); ?></p>
             <?php endif; ?>
 
             <div class="search-box">
@@ -73,7 +73,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                             <td>
                                 <a href="edit.php?id=<?php echo $anggota['id']; ?>" class="btn-edit">Edit</a>
                                 <form class="form-hapus" method="post" action="hapus.php">
-                                    <input type="hidden" name="id" value="<?php echo $anggota['id']; ?>">
+                                    <input type="hidden" name="id" value="<?php echo (int) $anggota['id']; ?>">
                                     <?php echo csrf_field(); ?>
                                     <button type="submit" class="btn-hapus">Hapus</button>
                                 </form>
@@ -87,7 +87,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
 
             <nav class="pagination">
                 <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                <a href="list.php?page=<?php echo $i; ?><?php echo $keyword !== '' ? '&q=' . urlencode($keyword) : ''; ?>"
+                <a href="edit.php?id=<?php echo (int) $anggota['id']; ?>" class="btn-edit">Edit</a>
                    class="<?php echo $i === $page ? 'active' : ''; ?>"><?php echo $i; ?></a>
                 <?php endfor; ?>
             </nav>
